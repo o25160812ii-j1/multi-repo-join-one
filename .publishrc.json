@@ -1,0 +1,46 @@
+{
+  "registries": {
+    "npmjs-o25-16-0812ii-multi-repo-join-one": {
+      "type": "npm",
+      "owner": "",
+      "package_name": "@o25.16.0812ii/multi-repo-join-one",
+      "token": "{{NPM_TOKEN_O25160812II}}",
+      "access": "public",
+      "enabled": true,
+      "package_extra": {
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/o25160812ii-j1/multi-repo-join-one.git"
+        },
+        "publishConfig": {
+          "registry": "https://registry.npmjs.org/"
+        }
+      }
+    },
+    "github-o25160812ii-j1-multi-repo-join-one": {
+      "type": "github",
+      "owner": "o25160812ii-j1",
+      "repo": "multi-repo-join-one",
+      "token": "{{GITHUB_TOKEN_O25160812II}}",
+      "access": "public",
+      "enabled": true,
+      "package_extra": {
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/o25160812ii-j1/multi-repo-join-one"
+        },
+        "publishConfig": {
+          "registry": "https://npm.pkg.github.com"
+        }
+      }
+    }
+  },
+  "build": {
+    "command": null,
+    "skipBuild": false
+  },
+  "npm": {
+    "defaultArgs_remove": ["--no-git-checks"],
+    "customArgs": []
+  }
+}

@@ -45,7 +45,9 @@
     "setup:rtdb-emulator": "firebase setup:emulators:database",
     "test:smoke:rtdb": "vitest run test/smoke/rtdb-emulator.test.ts --reporter=verbose",
     "check:output": "node scripts/check-output.js --env .deploy/env.prod --artifact artifacts/repo-sync.log --out artifacts/check-report.json",
-    "bootstrap:api": "bash scripts/bootstrap-from-env.sh .deploy/env.prod"
+    "bootstrap:api": "bash scripts/bootstrap-from-env.sh .deploy/env.prod",
+    "env-push": "dotenvrtdb -e .env.nmp --push -eUrl=$env:DOTENVRTDB_URL",
+    "ocli-gh": "dotenvrtdb -e .env.nmp -- ocli gh"
   },
   "dependencies": {
     "firebase-admin": "^12.7.0",
